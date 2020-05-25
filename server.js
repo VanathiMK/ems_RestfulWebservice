@@ -16,7 +16,7 @@ dynamoose.aws.sdk.config.update({
 const ddb=new dynamoose.aws.sdk.DynamoDB();
 dynamoose.aws.ddb.set(ddb);
 dynamoose.aws.ddb.local();
-
+exports.EmpModel= require("./models/Employee.model")(dynamoose);
 
 var corsOptions={
 origin:"http://localhost:3000"
@@ -41,3 +41,4 @@ const port=8081;
 app.listen(port,()=>{
 console.log("server running on port "+port);
 });
+

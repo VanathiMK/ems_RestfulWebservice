@@ -30,28 +30,3 @@ async function createTable(){
 console.log("Printing from log " + createTable());
 
 
-async function addEmployee(){
-    const emp1 = new Employee({
-        "id": 101,
-        "firstName": "Geetha",
-        "surName":"Vani",
-        "email":"geetha@gmail.com",
-        "dob":"21 Nov 1988",
-        "gender":"Female"
-    });
-    await emp1.save((error)=>{
-        if(error)
-        console.log(error);
-        else console.log("Employee saved!!!");
-    });
-
-}
-addEmployee();
-async function getEmployee(id){
-    const user = await Employee.get(101,(user)=>{
-        console.log(user);
-    });
-    console.log(user);
-}
-getEmployee(101);
-module.exports=Employee;
