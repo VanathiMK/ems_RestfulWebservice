@@ -8,9 +8,12 @@
 	 >node CreateTableDynamoose
 3. Navigate to project folder and start the server using the following commands.
 	>  cd employee-service
+	
 	>  npm start
 	
 You should see the following in the terminal:
 > employee-service@1.0.0 start  \employee-service
- node server.js
+
+> node server.js
+ 
 >server running on port 8081
